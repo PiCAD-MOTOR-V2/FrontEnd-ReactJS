@@ -1,0 +1,31 @@
+/* TitleBar.module.css */
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .pageTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .userDetails {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .userDetails span {
+    margin-left: 10px;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #333;
+  }
+  

@@ -1,0 +1,83 @@
+/* src/components/Common/Sidebar.module.css */
+
+.sidebar {
+    width: 296px;
+    height: 100vh;
+    /* background-color: #f0f4f7; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .sidebarHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 0; */
+  }
+  
+  .logo {
+    width: 80%;
+  }
+  
+  .sidebarMenu {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .sidebarMenuItem {
+    width: 100%;
+    /* margin-bottom: 10px; */
+  }
+  
+  .sidebarMenuLink {
+    text-decoration: none;
+    color: #3c3c3c;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* .sidebarMenuLink:hover {
+    background-color: #d4e4ef;
+  } */
+
+  .active {
+    color: #007ad9;
+    background-color: #f0f7fd;
+    background-image: url('../../assets/images/icons/leftBlue.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    /* border-radius: 4px; */
+    transition: background-color 0.3s ease;
+  }
+  
+  .activeLink {
+    background-color: #ffffff; /* White background */
+    /* Add any other styles for active link here */
+    border-left: 4px solid blue;
+  }
+
+  /* .leftBlue {
+    height: 72px;
+    border: solid blue 1px;
+  } */
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    stroke: currentColor;
+  }
