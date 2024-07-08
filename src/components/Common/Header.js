@@ -1,18 +1,41 @@
-// TitleBar.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
+import UserCard from './UserCard'; // Ensure the path is correct
 
-const Header = ({ title, user }) => {
+const Header = ({ pageTitle, user }) => {
+  const location = useLocation();
+
+  // Extract the current pathname to determine the active page
+  const getCurrentPage = () => {
+    const path = location.pathname;
+    switch (path) {
+      case '/admin/home':
+        return 'Admin Home';
+      case '/admin/user-management':
+        return 'User Management';
+      case '/admin/reports':
+        return 'Reports';
+      case '/admin/settings':
+        return 'Settings';
+      default:
+        return 'Admin Panel';
+    }
+  };
+
+  const currentPageTitle = pageTitle || getCurrentPage();
+
   return (
-    <div className={styles.Header}>
+    <div className={styles.header}>
       <div className={styles.pageTitle}>
-        <Link to="/admin/home" className={styles.link}>{title}</Link>
+        <Link to="/admin/home" className={styles.link}>{currentPageTitle}</Link>
       </div>
       <div className={styles.userDetails}>
-        <span>{user.name}</span>
-        <span>{user.role}</span>
-        {/* Add more user details as needed */}
+        <UserCard
+          username={user.username}
+          email={user.email}
+          avatar={user.avatar}
+        />
       </div>
     </div>
   );

@@ -9,7 +9,7 @@
 
 .mainContent {
   flex-grow: 1;
-  padding: 20px;
+  padding: 10px;
   overflow: auto; /* Enables scrolling for content */
   /* background-color: #d6eaf9; */
   background-color: #ffffff;

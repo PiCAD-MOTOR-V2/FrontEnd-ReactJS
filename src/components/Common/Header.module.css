@@ -1,17 +1,19 @@
 /* TitleBar.module.css */
-.Header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 20px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-bottom: 1px solid #ccc;
+    height: 90px;
+    padding: 10px 14px;
+    /* background-color: #f0f0f0; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 5px; */
   }
   
   .pageTitle {
-    font-size: 1.5rem;
+    font-size: 18px;
     font-weight: bold;
+    align-self: flex-start;
   }
   
   .userDetails {
