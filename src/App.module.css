@@ -9,11 +9,16 @@
 
 .mainContent {
   flex-grow: 1;
-  padding: 10px;
+  padding: 10px 24px;
   overflow: auto; /* Enables scrolling for content */
   /* background-color: #d6eaf9; */
   background-color: #ffffff;
   margin: 16px;
   margin-left: 0px;
   border-radius: 24px;
+}
+
+.dateRangePicker {
+  width: 200px;
+  height: 24px;
 }
