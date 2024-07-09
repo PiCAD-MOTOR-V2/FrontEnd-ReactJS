@@ -8,7 +8,7 @@ import ReportPage from './pages/Admin/ReportPage';
 import AdminSettingsPage from './pages/Admin/AdminSettingsPage';
 import styles from './App.module.css';
 import Header from './components/Common/Header';
-import DateRangePickerComponent from './components/Common/DateRangePicker';
+
 
 const App = () => {
   const [userData, setUserData] = useState({
@@ -50,7 +50,6 @@ const App = () => {
         <Sidebar />
         <div className={styles.mainContent}>
           <Header user={userData} />
-          <DateRangePickerComponent />
           <Routes>
             <Route path="/admin/home" element={<AdminHomePage />} />
             <Route path="/admin/user-management" element={<UserManagementPage />} />
