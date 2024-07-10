@@ -1,0 +1,15 @@
+.dateRangePicker input {
+    padding: 5px;
+    padding-right: 0px;
+    font-size: 10px;
+}
+
+.dateRangePicker label {
+    top: -10px;
+    font-size: 10px;
+}
+
+.dateRangePickerButton {
+    font-size: 10px !important;
+    padding: 0px !important;
+}

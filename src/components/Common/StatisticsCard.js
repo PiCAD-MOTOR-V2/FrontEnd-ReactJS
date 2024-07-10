@@ -4,9 +4,9 @@ import { Card, CardContent, Typography, Box } from '@mui/material';
 
 const StatisticsCard = ({ title, value, Icon }) => {
   return (
-    <Card sx={{ minWidth: 200, minHeight: 140, backgroundColor: '#007AD921', borderRadius: 2 }}>
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" sx={{ height: '52px', width: '206px', fontSize: '14px', color: '#000000', fontFamily: 'Poppins', fontWeight: 500, lineHeight: '20px' }}>
+    <Card sx={{ minWidth: 200, minHeight: 100, backgroundColor: '#007AD921', borderRadius: 2 }}>
+      <CardContent sx={{ padding: '10px !important'}}>
+        <Typography variant="body2" color="textSecondary" sx={{ height: '40px', width: '206px', fontSize: '14px', color: '#000000', fontFamily: 'Poppins', fontWeight: 500, lineHeight: '20px' }}>
           Total Number of <br /> {title}
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center', mt: 1 }}>
