@@ -5,7 +5,6 @@ import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgr
 import Tooltip from '@mui/material/Tooltip';
 
 const BorderLinearProgress = styled(LinearProgress)({
-  height: '3px',
   width: '300px',
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {

@@ -1,3 +1,5 @@
+@import "rsuite/dist/rsuite.css";
+
 .dateRangePicker input {
     padding: 5px;
     padding-right: 0px;
