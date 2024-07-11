@@ -1,0 +1,192 @@
+.settings-container {
+    width: 100%;
+    
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #707070;
+  }
+  
+  .tab.active {
+    border-bottom: 2px solid  #0069bd;
+    font-weight: bold;
+    color: #0069bd;
+  }
+  
+  .profile-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 20px;
+    height: 500px;
+  }
+  .head{
+    color: #0069bd;
+  }
+  
+  .profile-pic {
+    position: relative;
+  }
+  
+  .profile-pic img {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50%;
+  }
+  
+  
+  .form {
+    width: 30%;
+    margin-top: 20px;
+  }
+ 
+  
+  .form-group {
+    margin-bottom: 15px;
+    color: #777777;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  
+  
+  
+  .edit-button {
+    color: #0069bd;
+    border-radius: 32px !important;
+    text-transform: none !important;
+    font-family: "Poppins" !important;
+     }
+  
+  .edit-button:disabled, .submit-button:disabled {
+    background: #75b7ea !important;
+    color: white !important;
+    cursor: not-allowed !important;
+  }
+  
+  .submit-button {
+    color: #0069bd;
+    border-radius: 32px !important;
+    text-transform: none !important;
+    font-family: "Poppins" !important;
+    
+  }
+  
+  .profile-pic {
+    position: relative;
+    display: inline-block; /* Ensures the container only takes the space it needs */
+}
+
+
+.upload_button {
+  position: absolute;
+  bottom: -20px;
+  right: -0px;
+  max-width: 20px;
+}
+
+
+.security-settings {
+    margin-top: 20px;
+    height: 500px;
+  }
+
+  
+  .profile-pic {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  
+  .edit-icon {
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .edit-icon1 {
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  
+  .form {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  
+  .edit-button, .submit-button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    /* width: 98px !important; */
+    height: 48px;
+    border-radius: 32px;
+  }
+  
+/* .edit-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #007ad9;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  } */
+  
+
+  input {
+    padding: 10px !important;
+    font-family: "Poppins" !important;
+    font-size: 14px !important;
+    
+  }
+
+  label {
+    top: -7px !important;
+    font-family: "Poppins" !important;
+    font-size: 14px !important;
+  }
+
+  .button-group-right {
+    width: 100%;
+    text-align: end;
+    padding-top: 150px;
+    margin-top: 20px;
+    padding-right: 20px;
+    text-transform: none ;
+    font-family: "Poppins" !important;
+  }
+
+  .password-visibility-icon .MuiSvgIcon-root {
+    color: #0069bd;
+    font-size: 25px;
+  }
