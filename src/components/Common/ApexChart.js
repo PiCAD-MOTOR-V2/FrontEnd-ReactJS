@@ -354,68 +354,69 @@ export default class ApexChart extends React.Component {
         },
       
       
-        selection: 'one_year',
+        // selection: 'one_year',
       
       };
     }
 
   
-    updateData(timeline) {
-      this.setState({
-        selection: timeline
-      })
+    // updateData(timeline) {
+    //   this.setState({
+    //     selection: timeline
+    //   })
     
-      switch (timeline) {
-        case 'one_month':
-          ApexCharts.exec(
-            'area-datetime',
-            'zoomX',
-            new Date('28 Jan 2013').getTime(),
-            new Date('27 Feb 2013').getTime()
-          )
-          break
-        case 'six_months':
-          ApexCharts.exec(
-            'area-datetime',
-            'zoomX',
-            new Date('27 Sep 2012').getTime(),
-            new Date('27 Feb 2013').getTime()
-          )
-          break
-        case 'one_year':
-          ApexCharts.exec(
-            'area-datetime',
-            'zoomX',
-            new Date('27 Feb 2012').getTime(),
-            new Date('27 Feb 2013').getTime()
-          )
-          break
-        case 'ytd':
-          ApexCharts.exec(
-            'area-datetime',
-            'zoomX',
-            new Date('01 Jan 2013').getTime(),
-            new Date('27 Feb 2013').getTime()
-          )
-          break
-        case 'all':
-          ApexCharts.exec(
-            'area-datetime',
-            'zoomX',
-            new Date('23 Jan 2012').getTime(),
-            new Date('27 Feb 2013').getTime()
-          )
-          break
-        default:
-      }
-    }
+    //   switch (timeline) {
+    //     case 'one_month':
+    //       ApexCharts.exec(
+    //         'area-datetime',
+    //         'zoomX',
+    //         new Date('28 Jan 2013').getTime(),
+    //         new Date('27 Feb 2013').getTime()
+    //       )
+    //       break
+    //     case 'six_months':
+    //       ApexCharts.exec(
+    //         'area-datetime',
+    //         'zoomX',
+    //         new Date('27 Sep 2012').getTime(),
+    //         new Date('27 Feb 2013').getTime()
+    //       )
+    //       break
+    //     case 'one_year':
+    //       ApexCharts.exec(
+    //         'area-datetime',
+    //         'zoomX',
+    //         new Date('27 Feb 2012').getTime(),
+    //         new Date('27 Feb 2013').getTime()
+    //       )
+    //       break
+    //     case 'ytd':
+    //       ApexCharts.exec(
+    //         'area-datetime',
+    //         'zoomX',
+    //         new Date('01 Jan 2013').getTime(),
+    //         new Date('27 Feb 2013').getTime()
+    //       )
+    //       break
+    //     case 'all':
+    //       ApexCharts.exec(
+    //         'area-datetime',
+    //         'zoomX',
+    //         new Date('23 Jan 2012').getTime(),
+    //         new Date('27 Feb 2013').getTime()
+    //       )
+    //       break
+    //     default:
+    //   }
+    // }
   
 
     render() {
       return (
         <div>
           <div id="chart">
-            <div className="toolbar">
+            
+            {/* <div className="toolbar">
               <button id="one_month"
                   
                   onClick={()=>this.updateData('one_month')} className={ (this.state.selection==='one_month' ? 'active' : '')}>
@@ -446,7 +447,7 @@ export default class ApexChart extends React.Component {
                   onClick={()=>this.updateData('all')} className={ (this.state.selection==='all' ? 'active' : '')}>
                 ALL
               </button>
-            </div>
+            </div> */}
           
             <div id="chart-timeline">
             <ReactApexChart options={this.state.options} series={this.state.series} type="area" height={200} />

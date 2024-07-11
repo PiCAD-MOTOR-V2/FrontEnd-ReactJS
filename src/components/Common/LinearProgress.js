@@ -9,11 +9,11 @@ const BorderLinearProgress = styled(LinearProgress)({
   width: '300px',
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#c9c9c9',
   },
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
-    backgroundColor: '#1a90ff',
+    backgroundColor: '#009400',
   },
 });
 
@@ -50,13 +50,14 @@ export default function ProgressBarList() {
       <tbody>
         {data.map((item, index) => (
           <tr key={index}>
-            <td style={{ textAlign: 'left', padding: '8px', fontSize: '12px', fontFamily: 'Poppins', fontWeight: '500', color: '#222222' }}>{item.type}</td>
-            <td style={{ padding: '8px' }}>
+            <td style={{ textAlign: 'left', padding: '2px', fontSize: '12px', fontFamily: 'Poppins', fontWeight: '500', color: '#222222' }}>{item.type}</td>
+            <td style={{ padding: '2px' }}>
               <CustomizedLinearProgress value={item.value} />
             </td>
-            <td style={{ padding: '8px', textAlign: 'center' }}>
+            <td style={{ padding: '2px', textAlign: 'center' }}>
               <div style={{
                 display: 'inline-block',
+                width: '50px',
                 backgroundColor: '#0094001F',
                 border: '0.5px solid #009400',
                 borderRadius: '5px',

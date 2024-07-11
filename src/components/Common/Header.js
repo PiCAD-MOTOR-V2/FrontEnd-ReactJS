@@ -11,7 +11,7 @@ const Header = ({ pageTitle, user }) => {
     const path = location.pathname;
     switch (path) {
       case '/admin/home':
-        return 'Admin Home';
+        return 'Home';
       case '/admin/user-management':
         return 'User Management';
       case '/admin/reports':

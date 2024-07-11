@@ -10,8 +10,8 @@ const DateRangePickerComponent = () => {
 
   return (
 <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#007ad9' }}>
-        <Typography variant="h6" sx={{ fontSize: '14px' }}>Timeframe:</Typography>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, color: '#0069bd' }}>
+        <Typography variant="h6" sx={{ fontSize: '14px', fontFamily: 'Poppins' }}>Timeframe:</Typography>
         <DatePicker
           className={styles.dateRangePicker}
           sx={{ width: '100px', '& .MuiSvgIcon-root': { fontSize: '16px' } }}

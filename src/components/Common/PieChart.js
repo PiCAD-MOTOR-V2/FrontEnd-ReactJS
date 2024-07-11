@@ -3,7 +3,7 @@ import { PieChart } from '@mui/x-charts/PieChart';
 
 const data = [
   { id: 0, value: 10, label: 'Active', color: '#009400' },
-  { id: 1, value: 15, label: 'Inactive', color: '#007AD996' },
+  { id: 1, value: 15, label: 'Inactive', color: '#0069BD' },
 ];
 
 export default function PieActiveArc() {

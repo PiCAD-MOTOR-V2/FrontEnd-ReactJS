@@ -6,17 +6,17 @@ const data = [
   { name: 'Non-EV', value: 35 },
 ];
 
-const COLORS = ['#28a745', '#007bff'];
+const COLORS = ['#009400', '#0069bd'];
 
 const ApplicationTypeChart = () => (
-  <ResponsiveContainer width="100%" height={300}>
+  <ResponsiveContainer width="100%" height={200}>
     <PieChart>
       <Pie
         data={data}
-        innerRadius={70}
+        innerRadius={50}
         outerRadius={90}
         fill="#8884d8"
-        paddingAngle={5}
+        paddingAngle={0}
         dataKey="value"
       >
         {data.map((entry, index) => (
