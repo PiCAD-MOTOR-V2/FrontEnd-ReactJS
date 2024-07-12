@@ -1,11 +1,13 @@
 // src/components/Admin/UserManagement.jsx
 import React from 'react';
+import TrackRequest from '../Common/CSmartTable';
+
+
 
 const UserManagement = () => {
   return (
     <div>
-      <h2>User Management</h2>
-      <p>Manage your users here.</p>
+      <TrackRequest />
     </div>
   );
 };
