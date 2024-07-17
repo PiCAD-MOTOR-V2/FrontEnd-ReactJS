@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, IconButton, InputAdornment } from '@mui/material';
+import { TextField, Button, IconButton, InputAdornment, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import './Settings.css';
@@ -20,6 +20,7 @@ const Settings = () => {
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [profileImageSrc, setProfileImageSrc] = useState(profileImage);
+  const [open, setOpen] = useState(false);
 
   const handleEditClick = () => {
     setIsEditing(true);
@@ -36,6 +37,11 @@ const Settings = () => {
 
   const handlePasswordSaveClick = () => {
     // Handle the password change logic here
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   const togglePasswordVisibility = (field) => {
@@ -77,7 +83,7 @@ const Settings = () => {
       </div>
       {activeTab === 'General' && (
         <div className="profile-settings">
-          <h4 className='head'>Profile settings</h4>
+          <h4 className='settings-h'>Profile settings</h4>
           <div className="profile-pic">
             <img src={profileImageSrc} alt="Profile" />
             {isEditing && (
@@ -234,6 +240,24 @@ const Settings = () => {
           </div>
         </div>
       )}
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Password Changed Successfully"}</DialogTitle>
+        <DialogContent>
+          {/* <DialogContentText id="alert-dialog-description">
+            Your password has been changed successfully.
+          </DialogContentText> */}
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary" autoFocus>
+            OK
+          </Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 };

@@ -1,0 +1,161 @@
+.filter-search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f0f7fd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins" !important;
+}
+
+.heading {
+  margin-bottom: 3%;
+  color: #0069bd;
+  font-family: "Poppins" !important;
+}
+
+.actions {
+  align-self: flex-end;
+  position: relative;
+  margin-bottom: 20px;
+  float: right;
+}
+
+.dropdown-button {
+  background-color: #0069bd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.actions:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Poppins" !important;
+}
+
+.report-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8%;
+  margin-bottom: 20px;
+  font-family: "Poppins" !important;
+}
+
+.report-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  font-family: "Poppins" !important;
+}
+
+.checkbox-group{
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+.checkspace{
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox-group label {
+  margin-bottom: 5px;
+  margin-left: 2px;
+  font-weight: bold;
+  color: #0069bd; /* Change label color */
+}
+
+.report-group label {
+  margin-bottom: 5px;
+  margin-left: 3px;
+  font-weight: bold;
+  color: #0069bd; /* Change label color */
+  font-family: "Poppins" !important;
+}
+
+.report-group input,
+.report-group select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px;
+  width: 12rem;
+  box-sizing: border-box;
+  color: #0069bd; /* Change input text color */
+  transition: border-color 0.3s; /* Smooth transition for border color change */
+  font-family: "Poppins" !important;
+}
+.report-group input:focus,
+.report-group select:focus {
+  border-color: #0069bd; /* Border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px #0069bd; /* Optional: Add a box shadow on focus */
+}
+
+
+/* .form-group input[type="date"]:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus {
+  border-color: #0069bd;
+} */
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2%;
+  width: 100%;
+  padding-right: 30px;
+}
+
+.buttons button {
+  background-color: #0069bd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #0069bd;
+
+}
+
+.buttons button:not(:last-child) {
+  margin-right: 10px;
+}
