@@ -1,0 +1,190 @@
+.CSmartTable {
+  font-size: 14px;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.add-user-modal {
+    animation: slideInFromRight 0.5s ease-out forwards;
+    display: flex !important;
+    justify-content:flex-end;
+    align-items: flex-end;
+    font-family: poppins;
+  }
+
+  .modal-dialog {
+    width: 302px;
+    margin: 16px;
+  }
+
+  .modal-content {
+    background-color: #f0f7fd;
+    color: #0069bd;
+    /* height: 100%; */
+    width: 302px;
+    
+  }
+  
+  .add-user-modal.c-show {
+    transform: translateX(0);
+  }
+  
+.add-user-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.add-user-modal form input:focus-visible {
+  /* background-color: blanchedalmond; */
+  /* border-color: antiquewhite; */
+  outline: 2px solid #4A90E2;
+  outline-offset: 2px;
+}
+
+.profile-pic {
+  text-align: center;
+}
+
+form > div {
+  margin: 10px;
+}
+
+.add-this-class tbody {
+  border-bottom: 0.5px solid #B4B4B4; /* Example border style for the table */
+  border-radius: 8px;        /* Example border radius */
+}
+
+.add-this-class tbody tr {
+  background-color: #FFFFFF !important; /* Ensures all rows have a white background */
+  height: 50px;
+}
+
+.add-this-class th {
+  background-color: #F0F7FD; /* Example background color for table headers */
+  color: #0069BD;            /* Example text color for table headers */
+  font-weight: bold;         /* Example font weight for table headers */
+}
+
+.add-this-class td {
+  color: #495057;            /* Example text color for table cells */
+}
+
+.add-this-class .custom-row {
+  background-color: #e9ecef; /* Example background color for specific rows */
+}
+
+.add-this-class .custom-cell {
+  background-color: #f1f3f5; /* Example background color for specific cells */
+  color: #212529;            /* Example text color for specific cells */
+}
+
+.add-this-class .custom-dropdown-toggle {
+  background-color: transparent; /* Example background color for dropdown toggle */
+  border: none;              /* Example border for dropdown toggle */
+  color: white;              /* Example text color for dropdown toggle */
+  background-image: url(../../assets//images//icons/DotsThreeVertical.svg);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 24px;
+}
+
+.custom-dropdown-toggle::after {
+  display: none; /* Remove default arrow */
+}
+
+.form-check-input {
+  height: 15px;
+  width: 15px;
+  border: 1px #A8A8A8 solid;
+}
+
+.add-this-class .dropdown-menu {
+  --cui-dropdown-min-width: 110px;
+  height: 79px;
+}
+
+.dropdown-item:active {
+  background-color: transparent !important;
+}
+
+.add-this-class .dropdown-menu.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.add-this-class .dropdown-menu li {
+  width: 90px;
+  height: 27px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.add-this-class .dropdown-menu li a {
+  height: 100%;
+  line-height: 19px;
+  padding: 4px 10px;
+}
+
+.add-this-class .dropdown-menu li:first-child {
+  background: rgba(0, 105, 189, 0.05);
+}
+
+.add-this-class .dropdown-menu li:first-child a {
+  color: #0069BD;
+}
+
+.add-this-class .dropdown-menu li:last-child {
+  background: rgba(231, 29, 54, 0.05);
+}
+
+.add-this-class .dropdown-menu li:last-child a {
+  color:#E71D36;
+}
+
+/* Action Button Styles */
+
+.actionBtn {
+  --cui-dropdown-min-width: 175px;
+  height: 110px;
+}
+
+.actionBtn li {
+  width: 156px;
+  height: 27px;
+  border-radius: 5px;
+  font-size: 10px;
+  background-color: rgba(0, 105, 189, 0.05);
+}
+
+.actionBtn.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.actionBtn li a {
+  height: 100%;
+  line-height: 19px;
+  padding: 4px 10px;
+  color: #0069BD;
+}
+
+.actionBtn .dropdown-item:hover {
+  background-color: #0069BD;
+  color: #FFFFFF;
+  border-radius: 5px;
+}

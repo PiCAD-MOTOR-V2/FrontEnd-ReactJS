@@ -1,0 +1,121 @@
+/* TableComponent.module.css */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    font-family: 'Arial', sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .theadRow {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .th,
+  .td {
+    padding: 12px 15px;
+    text-align: center;
+  }
+  
+  .tbodyRow {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .tbodyRow:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .tbodyRow:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .tbodyRowActive {
+    font-weight: bold;
+    color: #009879;
+  }
+  
+  .thSort {
+    cursor: pointer;
+  }
+  
+  .thSort:hover {
+    text-decoration: underline;
+  }
+  
+  /* Status Badge Styles */
+  .statusBadge {
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 0.75em;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 0.25rem;
+    text-align: center;
+    width: 80px;
+  }
+  
+  .statusActive {
+    background-color: #28a745;
+  }
+  
+  .statusInactive {
+    background-color: #ffc107;
+  }
+  
+  .statusSuspended {
+    background-color: #dc3545;
+  }
+  
+  /* Dropdown Button Styles */
+  .dropdownMenu {
+    min-width: auto;
+  }
+
+  .customDropdown div {
+    background-color: #d3e5f9; /* Custom background color */
+    color: white;             /* Custom text color */
+    border-radius: 5px;       /* Custom border radius */
+    display: flex;
+    flex-direction: column;
+
+  }
+  
+  .customDropdown .dropdownMenu {
+    background-color: #f8f9fa; /* Custom dropdown menu background */
+  }
+  
+  .customDropdown .dropdownItem {
+           /* Custom dropdown item text color */
+    text-decoration: none;
+
+  }
+  
+  .customDropdown .dropdownItem:hover {
+    background-color: #007bff; /* Custom dropdown item hover background */
+    color: white;              /* Custom dropdown item hover text color */
+    border-radius: 5px;
+  }
+
+  /* Filter Input Styles */
+  .filterInput {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .bulkActions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .bulkActionsButtons {
+    display: flex;
+    gap: 10px;
+  }
+  
