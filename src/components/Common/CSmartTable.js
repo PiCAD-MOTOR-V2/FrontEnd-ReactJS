@@ -29,7 +29,7 @@ import viewEyeIcon from '../../assets/images/icons/viewEyeIcon.svg';
 import deleteIcon from '../../assets/images/icons/deleteIcon.svg';
 
 const TrackRequest = () => {
-  const [details, setDetails] = useState([]);
+  // const [details, setDetails] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [usersData, setUsersData] = useState([
     {
@@ -169,16 +169,16 @@ const TrackRequest = () => {
     }
   };
 
-  const toggleDetails = (index) => {
-    const position = details.indexOf(index);
-    let newDetails = details.slice();
-    if (position !== -1) {
-      newDetails.splice(position, 1);
-    } else {
-      newDetails = [...details, index];
-    }
-    setDetails(newDetails);
-  };
+  // const toggleDetails = (index) => {
+  //   const position = details.indexOf(index);
+  //   let newDetails = details.slice();
+  //   if (position !== -1) {
+  //     newDetails.splice(position, 1);
+  //   } else {
+  //     newDetails = [...details, index];
+  //   }
+  //   setDetails(newDetails);
+  // };
 
   const handleAction = (action) => {
     switch (action) {
