@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@coreui/coreui": "^5.0.2",
+    "@coreui/react": "^5.1.0",
     "@coreui/react-pro": "^5.2.0",
     "@date-io/date-fns": "^2.11.0",
     "@emotion/react": "^11.11.4",
