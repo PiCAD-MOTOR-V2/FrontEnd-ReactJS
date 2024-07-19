@@ -165,7 +165,7 @@ const Settings = () => {
       )}
       {activeTab === 'Security' && (
         <div className="security-settings">
-          <h4 className='head'>Reset Password</h4>
+          <h4 className='settings-h'>Reset Password</h4>
           <div className="form">
             <div className="form-group">
               <TextField
