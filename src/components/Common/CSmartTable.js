@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
 import {
   CSmartTable,
   CBadge,
@@ -24,7 +23,7 @@ import {
   CFormInput,
   CFormTextarea,
   CFormSelect,
-  CCloseButton,
+  // CCloseButton,
 } from "@coreui/react-pro";
 import '@coreui/coreui/dist/css/coreui.min.css';
 import editprofile from '../../assets/images/icons/ProfileCamIcon.svg';
@@ -32,7 +31,7 @@ import '../Common/CSmartTable.css'; // Import your CSS file for the transition e
 import viewEyeIcon from '../../assets/images/icons/viewEyeIcon.svg';
 import deleteIcon from '../../assets/images/icons/deleteIcon.svg';
 import emailIcon from '../../assets/images/icons/emailIcon.svg';
-import lastLoginIcon from '../../assets/images/icons/lastLoginIcon.svg';
+// import lastLoginIcon from '../../assets/images/icons/lastLoginIcon.svg';
 import bioIcon from '../../assets/images/icons/bioIcon.svg';
 import passwordIcon from '../../assets/images/icons/passwordIcon.svg';
 import ratingIcon from '../../assets/images/icons/ratingIcon.svg';
@@ -424,6 +423,25 @@ const TrackRequest = () => {
       }}
     />
 
+{/* Delete Confirmation Modal */}
+{/* <CModal visible={deleteModal} onClose={() => setDeleteModal(false)}>
+        <CModalHeader>
+          <CModalTitle>Delete Confirmation</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          Are you sure you want to delete {userToDelete ? "this user" : "these users"}?
+        </CModalBody>
+        <CModalFooter>
+          <CButton color="secondary" onClick={() => setDeleteModal(false)}>
+            Cancel
+          </CButton>
+          <CButton color="danger" onClick={userToDelete ? handleConfirmDelete : handleBulkDelete}>
+            Delete
+          </CButton>
+        </CModalFooter>
+      </CModal> */}
+
+
 <CModal visible={viewModal} onClose={() => setViewModal(false)} className="add-user-modal">
       <CModalHeader onClose={() => setViewModal(false)} className="closeButton">
         <CButton color="primary" className="edit-button" onClick={toggleEdit}>
@@ -435,8 +453,17 @@ const TrackRequest = () => {
           <>
             <div className="profile-section">
               <p className="userStatus">{editableUser.status}</p>
-              <img src={editableUser.profilePicture} alt="Profile" className="profile-picture" />
-              <h4 className="userName">{editableUser.userName}</h4>
+              {/* <img src={editableUser.profilePicture} alt="Profile" className="profile-picture" />+ */}
+              <img src='https://cdn-icons-png.flaticon.com/128/3177/3177440.png' alt="Profile" className="profile-picture" />
+              {/* <h4 className="userName">{editableUser.userName}</h4> */}
+              <CFormInput
+                    type="text"
+                    name="userName"
+                    value={editableUser.userName}
+                    readOnly={!isEditable}
+                    className="borderless-input userName"
+                    onChange={handleInputChange}
+                  />
               <p className="userOccupation">{editableUser.occupation}</p>
             </div>
             <div className="about-section">
@@ -444,7 +471,7 @@ const TrackRequest = () => {
               <div className="about-item">
                 <img src={emailIcon} alt="Email Icon"/>
                 <div>
-                  <label>Email:</label>
+                  <label>EMAIL</label>
                   <CFormInput
                     type="text"
                     name="emailId"
@@ -472,7 +499,7 @@ const TrackRequest = () => {
               <div className="about-item">
                 <img src={bioIcon} alt="Bio Icon"/>
                 <div>
-                  <label>Bio:</label>
+                  <label>BIO</label>
                   <CFormTextarea
                   rows={3}
                     type="text"
@@ -490,7 +517,7 @@ const TrackRequest = () => {
               <div className="about-item">
                 <img src={passwordIcon} alt="Password Icon"/>
                 <div>
-                  <label>Password:</label>
+                  <label>PASSWORD</label>
                   <div className="password-container">
                     <CFormInput
                       type="password"
@@ -508,7 +535,7 @@ const TrackRequest = () => {
                 <div className="rating">
                   <img src={ratingIcon} alt="Rating Icon"/>
                   <div>
-                    <label>Rating</label>
+                    <label>RATING</label>
                     <div>
                       <Rating name="read-only" value={editableUser.rating} size="small" readOnly />
                     </div>
@@ -517,7 +544,7 @@ const TrackRequest = () => {
                 <div className="comment">
                   <img src={commentIcon} alt="Comment Icon"/>
                   <div>
-                    <label>Comment</label>
+                    <label>COMMENT</label>
                     <div>
                       <CFormTextarea value={editableUser.comment} readOnly/>
                     </div>
@@ -535,7 +562,7 @@ const TrackRequest = () => {
       </CModalFooter> */}
     </CModal>
 
-      <CModal visible={statusModal} onClose={() => setStatusModal(false)}>
+      <CModal visible={statusModal} onClose={() => setStatusModal(false)} className="status-modal">
         <CModalHeader onClose={() => setStatusModal(false)}>
           <CModalTitle>Update Status</CModalTitle>
         </CModalHeader>

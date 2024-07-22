@@ -73,6 +73,11 @@
     font-weight: 600;
     height: 24px;
     color: #0069BD;
+    text-align: center;
+  }
+
+  .userName:focus {
+    color: #0069BD;
   }
 
   .userOccupation {
@@ -92,8 +97,8 @@
   }
 
   .profile-picture {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
   }
 
@@ -115,6 +120,11 @@
     align-items: center;
     border-bottom: 1px solid #ccc;
     padding: 10px 0px;
+  }
+
+  .about-item img, .rating img, .comment img {
+    align-self: flex-start;
+    margin-top: 5px;
   }
 
   .about-item > div {
@@ -349,4 +359,12 @@ form > div {
 
 .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 .25rem rgba(0,105,189,.25);
+}
+
+/* Status Modal */
+
+.status-modal {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
