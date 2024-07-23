@@ -1,0 +1,23 @@
+@import "rsuite/dist/rsuite.css";
+
+.dateRangePicker input {
+    padding: 5px;
+    padding-right: 0px;
+    font-size: 10px;
+    /* height: 15px; */
+}
+
+.dateRangePicker label {
+    top: -10px;
+    font-size: 10px;
+    font-family: Poppins !important;
+}
+
+.dateRangePickerButton {
+    height: 24px;
+    font-size: 10px !important;
+    /* padding: 5px !important; */
+    font-family: Poppins !important;
+    /* background-color: #0069bd !important; */
+    text-transform: none !important;
+}

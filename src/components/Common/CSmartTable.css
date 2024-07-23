@@ -1,0 +1,370 @@
+.CSmartTable {
+  font-size: 14px;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Add User Modal */
+
+.add-user-modal {
+    animation: slideInFromRight 0.5s ease-out forwards;
+    display: flex !important;
+    justify-content:flex-end;
+    align-items: flex-end;
+    font-family: poppins;
+  }
+
+  .closeButton {
+    display: grid;
+    justify-content: flex-start;
+    text-align: left;
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+
+  .modal-dialog {
+    width: 302px;
+    margin: 16px;
+  }
+
+  .modal-content {
+    background-color: #f0f7fd;
+    color: #0069bd;
+    /* height: 100%; */
+    width: 302px;
+    
+  }
+  
+  .add-user-modal.c-show {
+    transform: translateX(0);
+  }
+  
+  .add-user-modal .edit-button {
+    position: absolute;
+    right: 15px;
+    height: 25px;
+    width: 69px;
+    font-size: 12px;
+    line-height: 0;
+    background-color: #0069BD;
+  }
+
+  .userStatus {
+    width: 62px;
+    height: 31px;
+    background-color: #00940038;
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 22px;
+    color: #009400;
+  }
+
+  .userName {
+    font-size: 18px;
+    font-weight: 600;
+    height: 24px;
+    color: #0069BD;
+    text-align: center;
+  }
+
+  .userName:focus {
+    color: #0069BD;
+  }
+
+  .userOccupation {
+    font-size: 14px;
+    font-weight: 400;
+    height: 15px; 
+    color: #030229;
+  }
+
+  .profile-section {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-picture {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+
+  /* About Section */
+
+  .about-section {
+    padding: 0px 22px;
+  }
+
+  .aboutTitle {
+    font-size: 16px;
+    font-weight: 500;
+    height: 20px; 
+    color: #030229;
+  }
+
+  .about-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0px;
+  }
+
+  .about-item img, .rating img, .comment img {
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+
+  .about-item > div {
+    width: 100%;
+  }
+
+  .about-item textarea {
+    height: 90px;
+    font-size: 14px;
+    overflow-y: scroll;
+    scrollbar-color: #0069bd transparent;
+    scrollbar-width: thin;
+    resize: none;
+  }
+
+  .about-item div, .rating-comment > div > div {
+    margin-left: 10px;
+  }
+
+  .rating-comment > div > div {
+    width: 100%;
+  }
+
+  .about-item label, .rating-comment label {
+    /* margin-left: 10px; */
+    flex: 1;
+    font-size: 12px;
+  }
+
+  .about-item input {
+    flex: 1;
+    font-size: 14px;
+    padding: 0px;
+  }
+
+  .rating-comment {
+    display: flex;
+    flex-direction: column;
+    width: 269px;
+    height: 184px;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    padding: 12px 22px;
+  }
+
+  .rating-comment > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .rating-comment .comment textarea {
+    height: 90px;
+    font-size: 14px;
+    overflow-y: scroll;
+    scrollbar-color: #0069bd transparent;
+    scrollbar-width: thin;
+    resize: none;
+  }
+
+.add-user-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.add-user-modal form input:focus-visible {
+  /* background-color: blanchedalmond; */
+  /* border-color: antiquewhite; */
+  outline: 2px solid #4A90E2;
+  outline-offset: 2px;
+}
+
+.borderless-input {
+  border: none;
+  background: none;
+  width: 100%;
+}
+
+.borderless-input:focus {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.profile-pic {
+  text-align: center;
+}
+
+form > div {
+  margin: 10px;
+}
+
+.add-this-class tbody {
+  border-bottom: 0.5px solid #B4B4B4;
+  border-radius: 8px;
+}
+
+.add-this-class tbody tr {
+  background-color: #FFFFFF !important;
+  height: 50px;
+}
+
+.add-this-class th {
+  background-color: #F0F7FD;
+  color: #0069BD;
+  font-weight: bold;
+}
+
+.add-this-class td {
+  color: #495057;
+}
+
+.add-this-class .custom-row {
+  background-color: #e9ecef;
+}
+
+.add-this-class .custom-cell {
+  background-color: #f1f3f5;
+  color: #212529; 
+}
+
+.add-this-class .custom-dropdown-toggle {
+  background-color: transparent;
+  border: none;
+  color: white;
+  background-image: url(../../assets//images//icons/DotsThreeVertical.svg);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 24px;
+}
+
+.custom-dropdown-toggle::after {
+  display: none; /* Remove default arrow */
+}
+
+.form-check-input {
+  height: 15px;
+  width: 15px;
+  border: 1px #A8A8A8 solid;
+}
+
+.add-this-class .dropdown-menu {
+  --cui-dropdown-min-width: 110px;
+  height: 79px;
+}
+
+.dropdown-item:active {
+  background-color: transparent !important;
+}
+
+.add-this-class .dropdown-menu.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.add-this-class .dropdown-menu li {
+  width: 90px;
+  height: 27px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.add-this-class .dropdown-menu li a {
+  height: 100%;
+  line-height: 19px;
+  padding: 4px 10px;
+}
+
+.add-this-class .dropdown-menu li:first-child {
+  background: rgba(0, 105, 189, 0.05);
+}
+
+.add-this-class .dropdown-menu li:first-child a {
+  color: #0069BD;
+}
+
+.add-this-class .dropdown-menu li:last-child {
+  background: rgba(231, 29, 54, 0.05);
+}
+
+.add-this-class .dropdown-menu li:last-child a {
+  color:#E71D36;
+}
+
+/* Action Button Styles */
+
+.actionBtn {
+  --cui-dropdown-min-width: 175px;
+  height: 110px;
+}
+
+.actionBtn li {
+  width: 156px;
+  height: 27px;
+  border-radius: 5px;
+  font-size: 10px;
+  background-color: rgba(0, 105, 189, 0.05);
+}
+
+.actionBtn.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.actionBtn li a {
+  height: 100%;
+  line-height: 19px;
+  padding: 4px 10px;
+  color: #0069BD;
+}
+
+.actionBtn .dropdown-item:hover {
+  background-color: #0069BD;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+/* Add user & Action buttons */
+
+.buttonsATable {
+  background-color: #0069BD;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+/* The color while focusing input or checkbox */
+
+.form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 .25rem rgba(0,105,189,.25);
+}
+
+/* Status Modal */
+
+.status-modal {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
