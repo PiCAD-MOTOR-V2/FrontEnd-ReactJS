@@ -3,12 +3,12 @@ import { CSmartTable, CBadge } from "@coreui/react-pro";
 import "./CustomTable.css";
 
 
-const CustomTable = ({ userData, columns, getBadge }) => {
+const CustomTable = ({ usersData, columns, getBadge }) => {
   return (
     <div className="CSmartTable">
       <CSmartTable
         activePage={1}
-        items={userData}
+        items={usersData}
         clickableRows={false}
         columns={columns.map((column) => ({
           ...column,

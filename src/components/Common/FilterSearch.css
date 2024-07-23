@@ -106,7 +106,7 @@
 
 .report-group input,
 .report-group select {
-  padding: 10px;
+  /* padding: 10px; */
   border: 1px solid #0069bd;
   border-radius: 5px;
   height: 40px;
@@ -145,13 +145,76 @@
   cursor: pointer;
 }
 
-.buttons button:hover {
+.buttons button:focus {
   background-color: #0069bd;
 }
+/* .clearbutton{
+  background-color: #F0F7FD !important;
+  color: white;
+  padding: 10px 20px;
+  border:  #0069bd;
+  border-radius: 10px;
+  cursor: pointer;
+} */
 
 .buttons button:not(:last-child) {
   margin-right: 10px;
 }
 
+.tableClass{
+  padding-top: 30px;
+}
+.add-this-class {
+  background-color: #f0f7fd;
+}
 
+.add-this-class td{
+  box-shadow: none !important;
+  /* background-color: #f0f7fd !important; */
+  font-size: 14px !important;
+  padding: 2px !important;
+  text-align: center;
+  }
 
+.add-this-class th{
+  background-color: #f0f7fd;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* FilterSearch.css */
+.badge-completed {
+  background-color: rgba(0, 148, 0, 0.22);
+  color:#009400;
+  padding: 4px;
+  border-radius: 12px;
+  display: inline-block;
+  text-align: center;
+  width: 5rem;
+  font-weight: 600;
+}
+
+.badge-incomplete {
+  background-color: rgba(205, 98, 0, 0.22);
+  color: #CD6200;
+  padding: 4px;
+  border-radius: 22px;
+  display: inline-block;
+  text-align: center;
+  width: 5rem;
+  font-weight: 600;
+ 
+}
+.badge-ev {
+  color: #009400;
+  border: 1px solid #009400;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.badge-nonev {
+  color: #0069BD;
+  border: 1px solid #0069BD;
+  padding: 5px;
+  border-radius: 3px;
+}
