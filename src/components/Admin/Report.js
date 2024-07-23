@@ -1,11 +1,10 @@
 // src/components/Admin/Report.jsx
 import React from 'react';
-
+import FilterSearch from '../Common/FilterSearch';
 const Report = () => {
   return (
     <div>
-      <h2>Reports</h2>
-      <p>View your reports here.</p>
+      <FilterSearch />
     </div>
   );
 };
