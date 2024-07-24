@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './FilterSearch.css';
 import { DateRangePicker } from 'rsuite';
-// import { CSVLink } from "react-csv";
+import { CSVLink } from "react-csv";
 import { jsPDF } from "jspdf";
 import "jspdf-autotable";
-import { CSmartTable  } from "@coreui/react-pro";
+import { CSmartTable } from "@coreui/react-pro";
 
 const FilterSearch = () => {
-
   const usersData = [
     // Sample data
     {
@@ -63,7 +62,6 @@ const FilterSearch = () => {
     // Add more entries as needed...
   ];
 
-  // const [details, setDetails] = useState([]);
   const [selectedItems, setSelectedItems] = useState([]);
   const [filters, setFilters] = useState({
     name: "",
@@ -137,17 +135,6 @@ const FilterSearch = () => {
     }
   };
 
-  // const toggleDetails = (index) => {
-  //   const position = details.indexOf(index);
-  //   let newDetails = details.slice();
-  //   if (position !== -1) {
-  //     newDetails.splice(position, 1);
-  //   } else {
-  //     newDetails = [...details, index];
-  //   }
-  //   setDetails(newDetails);
-  // };
-
   const handleExport = (type) => {
     switch (type) {
       case "CSV":
@@ -159,10 +146,11 @@ const FilterSearch = () => {
       default:
         break;
     }
+    
   };
 
   const exportCSV = () => {
-    const selectedUsers = filteredData.filter(user => selectedItems.includes(user.id));
+    const selectedUsers = usersData.filter(user => selectedItems.includes(user.id));
 
     const csvHeaders = [
       'User Name',
@@ -193,9 +181,11 @@ const FilterSearch = () => {
     a.href = url;
     a.download = 'selected_users.csv';
     a.click();
+    window.location.reload();
   };
 
   const exportPDF = () => {
+    const selectedUsers = usersData.filter(user => selectedItems.includes(user.id));
     const doc = new jsPDF();
     doc.autoTable({
       head: [
@@ -209,7 +199,7 @@ const FilterSearch = () => {
           "Simulation Status",
         ],
       ],
-      body: filteredData.map((item) => [
+      body: selectedUsers.map((item) => [
         item.user_Name,
         item.email_id,
         item.ev_nonev,
@@ -219,7 +209,8 @@ const FilterSearch = () => {
         item.simulation_status,
       ]),
     });
-    doc.save("filtered_data.pdf");
+    doc.save("selected_users.pdf");
+    window.location.reload();
   };
 
   const clearFilters = () => {
@@ -281,17 +272,22 @@ const FilterSearch = () => {
     setFilteredData(data);
   };
 
+  const toggleDropdown = () => {
+    const dropdown = document.getElementById("dropdownContent");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  };
+
   return (
     <div className='mainclassfilter'>
       <div className="actions">
-        <button className="dropdown-button">Export as</button>
-        <div className="dropdown-content">
+        <button className="dropdown-button" id="exportButton" onClick={toggleDropdown}>Export as</button>
+        <div className="dropdown-content" id="dropdownContent">
           <a href="#" onClick={() => handleExport('CSV')}>CSV</a>
           <a href="#" onClick={() => handleExport('PDF')}>PDF</a>
         </div>
       </div>
       <div className="filter-search">
-        <h5 className='heading'>FilterSearch</h5>
+        <h5 className='heading'>Filter Search</h5>
         <div className="filter-form">
           <div className="report-section">
             <div className="report-group">
@@ -358,7 +354,7 @@ const FilterSearch = () => {
 
           <div className="buttons">
             <button className='clearbutton' onClick={clearFilters}>Clear Filter</button>
-            <button onClick={applyFilters}>Apply Filter</button>
+            <button className='applybutton' onClick={applyFilters}>Apply Filter</button>
           </div>
         </div>
       </div>
@@ -376,7 +372,7 @@ const FilterSearch = () => {
             console.log(items);
           }}
           onSelectedItemsChange={(items) => {
-            setSelectedItems(items);
+            setSelectedItems(items.map(item => item.id)); // Update selectedItems with selected IDs
             console.log(items);
           }}
           scopedColumns={{
