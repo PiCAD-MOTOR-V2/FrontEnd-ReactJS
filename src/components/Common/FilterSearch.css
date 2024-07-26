@@ -1,0 +1,257 @@
+.filter-search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f0f7fd;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins" !important;
+}
+
+.heading {
+  margin-bottom: 3%;
+  color: #0069bd;
+  font-family: "Poppins" !important;
+}
+
+.actions {
+  align-self: flex-end;
+  position: relative;
+  margin-bottom: 20px;
+  float: right;
+}
+
+.dropdown-button {
+  background-color: #0069bd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white; /* Background color of the dropdown */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10%;
+}
+
+#exportButton:focus + #dropdownContent,
+#exportButton:active + #dropdownContent {
+  display: block;
+  border-radius: 10%;
+}
+
+.dropdown-content a {
+  color: black;
+  text-align: center;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+  width: 105px;
+  background-color: #f0f7fd; /* Background color of dropdown items */
+  border-radius: 12%;
+  margin: 5px;
+}
+
+.dropdown-content a:hover {
+  background-color: #0069bd;
+  color: white; /* Optional: Change text color on hover for better contrast */
+}
+
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Poppins" !important;
+}
+
+.report-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8%;
+  margin-bottom: 20px;
+  font-family: "Poppins" !important;
+}
+
+
+
+.report-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  font-family: "Poppins" !important;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+.checkspace {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox-group label {
+  margin-bottom: 5px;
+  margin-left: 2px;
+  font-weight: bold;
+  color: #0069bd; /* Change label color */
+}
+
+.report-group label {
+  margin-bottom: 5px;
+  margin-left: 3px;
+  font-weight: bold;
+  color: #0069bd; /* Change label color */
+  font-family: "Poppins" !important;
+}
+
+.report-group input,
+.report-group select {
+  /* padding: 10px; */
+  border: 1px solid #0069bd;
+  border-radius: 5px;
+  height: 40px;
+  width: 12rem;
+  box-sizing: border-box;
+  color: grey; /* Change input text color */
+  transition: border-color 0.3s; /* Smooth transition for border color change */
+  font-family: "Poppins" !important;
+}
+
+.report-group input:focus,
+.report-group select:focus {
+  border-color: #0069bd;
+  outline: none;
+  box-shadow: 0 0 5px #0069bd;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2%;
+  width: 100%;
+  padding-right: 30px;
+}
+
+.clearbutton {
+  background-color: #F0F7FD;
+  border: 1px solid #0069bd !important;
+  color:  #0069bd;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+}
+.clearbutton:active{
+  background-color: #F0F7FD;
+  transform: scale(0.98);
+}
+.applybutton {
+  background-color: #0069bd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.applybutton:active {
+  background-color: #0056a0;
+  transform: scale(0.98);
+}
+
+
+/* .buttons button:focus {
+  background-color: #0069bd;
+} */
+
+/* .clearbutton{
+  background-color: #F0F7FD !important;
+  color: white;
+  padding: 10px 20px;
+  border:  #0069bd;
+  border-radius: 10px;
+  cursor: pointer;
+} */
+
+.buttons button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.tableClass{
+  padding-top: 30px;
+}
+.add-this-class {
+  background-color: #f0f7fd;
+}
+
+.add-this-class td{
+  box-shadow: none !important;
+  /* background-color: #f0f7fd !important; */
+  font-size: 14px !important;
+  padding: 4px !important;
+  text-align: center;
+  }
+
+.add-this-class th{
+  background-color: #f0f7fd;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* FilterSearch.css */
+.badge-completed {
+  background-color: rgba(0, 148, 0, 0.22);
+  color:#009400;
+  padding: 4px;
+  border-radius: 12px;
+  display: inline-block;
+  text-align: center;
+  width: 5rem;
+  font-weight: 600;
+}
+
+.badge-incomplete {
+  background-color: rgba(205, 98, 0, 0.22);
+  color: #CD6200;
+  padding: 4px;
+  border-radius: 22px;
+  display: inline-block;
+  text-align: center;
+  width: 5rem;
+  font-weight: 600;
+ 
+}
+.badge-ev {
+  color: #009400;
+  border: 1px solid #009400;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.badge-nonev {
+  color: #0069BD;
+  border: 1px solid #0069BD;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+
+
